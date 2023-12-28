@@ -1,0 +1,150 @@
+
+
+<mat-stepper orientation="vertical">
+    <ng-template matStepperIcon="edit">
+        <mat-icon>event</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="done">
+        <mat-icon>event</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="milestone">
+        <mat-icon>event</mat-icon>
+    </ng-template>
+
+
+    <mat-step state="milestone" >
+      <ng-template matStepLabel>Trainee Software Engineer</ng-template>
+      <ng-template matStepContent>
+        <ul>
+            <li>Writing scrapers with Python to fetch data from various Public Data Source Websites and integrate it with the existing data collection engine which normalised the data before storing into MySQL DB.
+            </li>
+            <li>AWS services like DynamoDB and S3 Buckets were used to serve, save the structured data and its components
+            </li>
+            <li>Scraping data from HTML's was done with use of BeautifulSoup and Python's built in regex libraries.
+            </li>
+            <li>Designed Feature, tables for scrapers(tasks) to be aware of previous run's, to avoid re fetching and parsing data from paid data sources which could be due to failed logic or accidental triggers.
+            </li>
+            <li>Perform analysis on how the scraper performed on websites by looking into the statistics stored on our DB.
+            </li>
+            <li>Take action on the determined analysis and take relevant action for fetching up to date data.
+            </li>
+            <li>Made enhancement to the framework for better normalisation, which would affect more than 40+ web scrapers active at the moment.
+            </li>
+            <li>Standardize aggregated data using different types of Legal data case type classifications.
+            </li>
+            <li>Use bash scripts to automate mundane tasks.
+            </li>
+            <li>Work with various development and QA teams on design, planning, and troubleshooting.
+            </li>
+            <li>Debug and address technical issues within the infrastructure.
+            </li>
+            <li>Extensively customized the Django admin to meet our form validations while setting up scrapers.
+            </li>
+            <li>Used Git versioning tool to track, review code changes.
+            </li>
+            <li>Mentored other trainee engineers on team.
+            </li>
+            <li>Implemeted REST API's on Python - Django web framework.
+            </li>
+            <li>Significant experience with query optimization, performance analysis, schema design/review and data modeling
+            </li>
+            <li>Debug and address technical issues within the infrastructure
+            </li>
+            <li>Scraper task management with Celery and RabbitMQ.
+            </li>
+            <li>Used salt stack, Jinja templates to customize Django configuration on EC2 servers.
+            </li>
+        </ul>
+
+      </ng-template>
+
+    </mat-step>
+    <mat-step state="milestone" >
+        <ng-template matStepLabel>Software Engineer</ng-template>
+        <ng-template matStepContent>
+          <ul>
+            <li>Designed, Implemented WebHooks for API's which take long time to complete. This drastically reduced number of API calls that were previously being madeto check if the API Triggered Celery task had completed.
+            </li>
+            <li>Moved our cron's which were on multiple EC2 instances to Django's celery beat which were managed in MySQL Database. This made it much simpler to view and manage all cron's set.
+            </li>
+            <li>Containerization of our monolithic Data Scraping framework, so development can be easily tested on local machine. Prior to this developer's required an EC2 instance on which they would have to test their code. 
+            </li>
+            <li>This saved up costs on EC2 instances and faster development because changes could be tested on local machine and all dependencies would be up on docker-compose.
+            </li>
+            <li>Documenting REST API's on swagger.
+            </li>
+            <li>Planned and Deployed code manually via python wrapper script around salt.
+            </li>
+            <li>Mentored, reviewed code of Trainee developer in team.</li>
+          </ul>
+        </ng-template>
+  
+      </mat-step>
+
+      <p>test</p>
+      <mat-step state="milestone" >
+        <ng-template matStepLabel>Senior I - Software Engineer</ng-template>
+        <ng-template matStepContent>
+          <ul>
+            <li>Maintained the Data scraping framework by reviewing features and bug fixes.
+            </li>
+            <li>Re architected the monolithic Data scraping framework into microservices. Deployed these microservices on Kubernetes cluster by defining the manifests. drastically reduced the number of AWS resources consumed.
+            </li>
+            <li>Used Django's multi db routing to have a single webapp serve data from 200+ DBs. Previously there was a django app per each database, after the migration the same load was distributed by fewer k8 pods.
+            </li>
+            <li>Switched to multi repo structure to ensure faster deliverability.
+            </li>
+            <li>Moved 220+ Databases on 200+ servers with 500GB+ total text data into Single larger server for better maintainability.
+            </li>
+            <li>Continuously monitored database performance and took action as necessary.
+            </li>
+            <li>Used various python packages to identify memory leaks.
+            </li>
+            <li>Implemented pooling where necessary.
+            </li>
+            <li>Implemented k8 pods to watch for events and retry a task on pod with more resources if it failed on the old one due to resource limitations.
+            </li>
+            <li>Built a monitoring framework for RabbitMQ to notifiy on Google chat when messages in queue cross an unexpected threshold
+            </li>
+            <li>Migrated MySQL Database from 5.5 to 8.0 wrote a script to validate that data was updated correctly. (This migration had a large down time)
+            </li>
+            <li>Tuned the database accordingly to get better performance after migration.
+            </li>
+            <li>Mentored Trainee developers with Docker and working of the Data Scraping framework when they first join team.
+            </li>
+            <li>Migrate the scraping module from Python 2.7 to 3.8
+            </li>
+            <li>Migrated the Django app from 1.4.x to 3.x and other dependent packages.
+            </li>
+            <li>Ensured that the data being updated was always consistent during above processes by thorough tests and validations.
+            </li>
+            <li>Monitored API performances via visualizations on Kibana
+            </li>
+            <li>POC for moving to AWS Lambdas instead of k8 pods.
+            </li>
+            <li>Moved the Data from MySQL8 to Postgres for better performance and fewer hiderances while running DDL statements. Implemented pgbouncer to tackle connection limitations.</li>
+            </ul>
+            </ng-template>
+  
+      </mat-step>
+      <mat-step state="milestone" >
+        <ng-template matStepLabel>Senior II - Software Engineer
+        </ng-template>
+        <ng-template matStepContent>
+          <ul>
+            <li>
+            Moved from Data scraping backend to Application backend.
+            </li>
+            <li>Implemented a K8 CronJob to automatically archive account data into S3 if the account was closed in PHP.
+            </li>
+            <li>Integrated Auth0 SSO with PHP 7.8 while retaining the exisisting Authentication and authorization workflow. Implemented trickle migration to avoid down time during deployment.
+            </li>
+            <li>POC on documentation tools like MdBook and Docusaurus.rainee Software Engineer</li>
+          </ul>
+          
+        </ng-template>
+  
+      </mat-step>
+
+</mat-stepper>
+  

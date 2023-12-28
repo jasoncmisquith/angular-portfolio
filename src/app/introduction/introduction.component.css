@@ -1,0 +1,23 @@
+.introduction-container {
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+/* .example-header-image {
+    background-image: url('/assets/images/IMG_20230211_212038.jpg');
+    background-size: cover;
+} */
+.portfolio-primary-image {
+    /* background-image: url('/assets/images/IMG_20230211_212038.jpg'); */
+    /* background-size: cover; */
+    border-radius: 50%;
+    box-shadow: 0 0 8px 8px white inset;
+}
+
+.example-card {
+    /* max-width: 400px; */
+    padding: 20px;
+    opacity: 0.5;
+}
